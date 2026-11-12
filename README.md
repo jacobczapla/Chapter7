@@ -6,7 +6,7 @@
 - [Browser Output Example](#browser-output-example)
 
 ## Summary
-Retrieving data from multiple tables
+Subqueries
 
 ## Workers
 [@jacobczapla](https://github.com/jacobczapla) Jacob Czapla
