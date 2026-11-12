@@ -24,4 +24,4 @@ row)
 - 
 ## Browser Output Example
 ##Query 1
-![Project Logo](Assets/Query1_4.png)
+![Project Logo](Assets/Query1_7.png)
