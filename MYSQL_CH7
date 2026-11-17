@@ -79,3 +79,17 @@ WHERE p.amount >
      WHERE pp.customer_id = p.customer_id)
 GROUP BY p.customer_id
 ORDER BY p.customer_id;
+-- create a new customer so that there is at least one customer without a payment
+INSERT INTO customer
+(store_id, first_name, last_name, email, address_id, active, create_date)
+VALUES
+(1, 'Test', 'Customer', 'testcustomer@email.com', 1, 1, NOW());
+
+-- 5.A
+SELECT c.customer_id, first_name, last_name
+FROM customer c
+WHERE NOT EXISTS 
+	(SELECT 1
+     FROM payment p
+     WHERE p.customer_id = c.customer_id)
+ORDER BY c.customer_id;
