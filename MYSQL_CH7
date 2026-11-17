@@ -93,3 +93,10 @@ WHERE NOT EXISTS
      FROM payment p
      WHERE p.customer_id = c.customer_id)
 ORDER BY c.customer_id;
+-- 5.B
+SELECT c.customer_id, c.first_name, c.last_name
+FROM customer c
+LEFT JOIN payment p
+ON c.customer_id = p.customer_id
+WHERE p.customer_id IS NULL
+ORDER BY c.customer_id;
