@@ -70,3 +70,12 @@ JOIN payment p
 ON c.customer_id = p.customer_id
 GROUP BY c.store_id, c.customer_id
 ORDER BY c.customer_id;
+-- 4.B
+SELECT p.customer_id, COUNT(*) AS count_over_avg_amt
+FROM payment p
+WHERE p.amount >
+    (SELECT AVG(pp.amount)
+     FROM payment pp
+     WHERE pp.customer_id = p.customer_id)
+GROUP BY p.customer_id
+ORDER BY p.customer_id;
