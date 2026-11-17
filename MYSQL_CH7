@@ -56,3 +56,17 @@ WHERE amount >
 FROM payment
 WHERE customer_id = 1)
 ORDER BY c.customer_id, payment_date;
+/*******************************
+Query 4: WHERE correlated subquery running multiple times (once for each outer
+row)
+4.A Write a query that uses the AVG aggerated function to display each customer's average amount paid.
+4.B Write a query that uses a correlated subquery in the WHERE clause to count all customer's payments greater than
+the customer's average payment.
+************************************/
+-- 4.A 
+SELECT c.store_id, c.customer_id, AVG(amount)
+FROM customer c
+JOIN payment p
+ON c.customer_id = p.customer_id
+GROUP BY c.store_id, c.customer_id
+ORDER BY c.customer_id;
