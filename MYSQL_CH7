@@ -46,3 +46,13 @@ WHERE amount > ALL
     FROM payment
     WHERE customer_id = 1)
 ORDER BY c.customer_id, payment_date;
+-- 3.B
+SELECT store_id, c.customer_id, payment_date, amount
+FROM customer c
+JOIN payment p 
+ON c.customer_id = p.customer_id
+WHERE amount >
+(SELECT MAX(amount)
+FROM payment
+WHERE customer_id = 1)
+ORDER BY c.customer_id, payment_date;
