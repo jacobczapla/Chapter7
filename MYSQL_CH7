@@ -89,7 +89,7 @@ VALUES
 SELECT c.customer_id, first_name, last_name
 FROM customer c
 WHERE NOT EXISTS 
-	(SELECT 1
+	(SELECT *
      FROM payment p
      WHERE p.customer_id = c.customer_id)
 ORDER BY c.customer_id;
