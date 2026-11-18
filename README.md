@@ -25,3 +25,37 @@ row)
 ## Browser Output Example
 ##Query 1
 ![Project Logo](Assets/Query1_7.png)
+
+## Browser Output Example
+##Query 2
+![Project Logo](Assets/Query2.1_7.png)
+
+## Browser Output Example
+##Query 3
+![Project Logo](Assets/Query3_7.png)
+
+## Browser Output Example
+##Query 4A
+![Project Logo](Assets/Query4.a.7.png)
+## Browser Output Example
+
+##Query 4B
+![Project Logo](Assets/Query4.b.7.png)
+## Browser Output Example
+
+##Query 5
+![Project Logo](Assets/Query5.7.png)
+## Browser Output Example
+
+##Query 6
+![Project Logo](Assets/Query6.7.png)
+## Browser Output Example
+
+##Query 7A
+![Project Logo](Assets/Query7.7.png)
+## Browser Output Example
+
+##Query 7B
+![Project Logo](Assets/7.7B.png)
+## Browser Output Example
+
