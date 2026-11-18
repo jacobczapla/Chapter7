@@ -113,3 +113,10 @@ SELECT c.customer_id, first_name, last_name,
     WHERE p.customer_id = c.customer_id) as latest_payment
 FROM customer c
 ORDER BY c.customer_id DESC;
+-- 6.B 
+SELECT c.customer_id, first_name, last_name, MAX(payment_date) AS latest_payment
+FROM customer c
+	LEFT JOIN payment p 
+    ON c.customer_id = p.customer_id
+    GROUP BY c.customer_id
+    ORDER BY latest_payment DESC;
